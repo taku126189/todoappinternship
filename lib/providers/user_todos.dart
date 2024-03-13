@@ -4,6 +4,7 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
+// ? Can this be replaced with Notifier?
 class UserTodosNotifier extends StateNotifier<List<Todo>> {
   UserTodosNotifier() : super(const []);
 

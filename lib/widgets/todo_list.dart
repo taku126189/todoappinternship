@@ -50,10 +50,11 @@ class TodoList extends HookConsumerWidget {
               textFieldFocusNode.requestFocus();
             },
             trailing: Checkbox(
-                value: userTodos[index].completed,
-                onChanged: (value) => ref
-                    .read(userTodosProvider.notifier)
-                    .toggleTodo(userTodos[index].id)),
+              value: userTodos[index].completed,
+              onChanged: (value) => ref
+                  .read(userTodosProvider.notifier)
+                  .toggleTodo(userTodos[index].id),
+            ),
             title: itemIsFocused
                 ? TextField(
                     autofocus: true,
@@ -86,10 +87,3 @@ bool useIsFocused(FocusNode node) {
 
   return isFocused.value;
 }
-
-
-
-// * Memo
-// Flutter has a Focus Tree that manages the focus state of a widget. The tree mirrors Widget Tree and keeps track of which widget has focus
-// Focusable widgets: Buttons, TextField, etc.
-// Each focusable widget is associated with a FocusNode instance. FocusNode represents the focus state of a widget

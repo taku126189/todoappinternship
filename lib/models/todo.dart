@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 
 class Todo {
-  Todo({
+  const Todo({
     required this.title,
     required this.date,
     required this.id,

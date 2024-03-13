@@ -29,13 +29,13 @@ class TodoScreen extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Todo List'),
-        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       ),
       body: Column(
         children: [
           Row(
             children: [
               Expanded(
+                // ? UniqueKey or ValueKey is needed for TextField?
                 child: TextField(
                   controller: textEditingController,
                 ),
